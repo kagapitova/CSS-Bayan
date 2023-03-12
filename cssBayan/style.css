@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+input[type='radio']{
+    display: none;
+}
+
+.row {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-top: 0.1rem solid darkgray;
+}
+
+body {
+    background: #FEF2E4;
+}
+.bayan-header{
+    font-size: 3rem;
+    width: 80%;
+    margin: auto;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.bayan {
+    width: 100%;
+}
+
+.bayan .not-label {
+    max-height: 0;
+    overflow: hidden;
+    transition: all .8s ease 0s;
+}
+
+.label:hover + input[type='radio']:checked + .not-label {
+   height: 30%;
+    padding: 2% 2% 4%;
+    transition: all .8s ease 0s;
+}
+
+.not-label {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+img {
+    width: 70%;
+    margin: auto;
+    transition: all .8s ease 0s;
+}
+
+.bayan li {
+    list-style: none;
+
+}
+label {
+    font-size: 2rem;
+    display: flex;
+    width: 100%;
+    transition: all .5s ease 0s;
+}
+
+.bayan:hover .label::after {
+    content: "+";
+    margin-right: 2%;
+}
+
+
+.bayan li label {
+    display: flex;
+    cursor: pointer;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bayan input[type='radio']:checked + .label{
+    color: darkgray;
+}
+
+
+
+.bayan input[type='radio']:checked + .label + .not-label {
+    max-height: 30%;
+    padding: 2% 2% 4%;
+    transition: all .5s ease 0s;
+}
+.bayan input[type='radio']:hover + .label + .not-label {
+    max-height: 30%;
+    padding: 2% 2% 4%;
+    transition: all .5s ease 0s;
+}
+
+
+.bayan:hover input[type='radio']:checked + .label::after {
+    content: "+";
+    rotate: 45deg;
+}
+.bayan input[type='radio']:checked + .not-label::after {
+    content: "";
+}
+
+.bayan:hover  {
+    color: darkorange;
+    transition: all .5s ease 0s;
+}
+
+@media (max-width:1920px) {
+    .bayan-header {
+        font-size: 3rem;
+    }
+
+    .label {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:1200px) {
+    .bayan-header {
+        font-size: 3rem;
+    }
+
+    .label {
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width:820px) {
+    .bayan-header {
+        font-size: 2rem;
+    }
+
+    .label {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width:320px) {
+    .bayan-header {
+        font-size: 1.5rem;
+    }
+
+    .label {
+        font-size: 1rem;
+    }
+
+}
