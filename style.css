@@ -30,6 +30,11 @@ body {
     transition: max-height 0.5s, padding 0.5s;
 }
 
+.label:hover + input[type='checkbox']:checked + .not-label {
+   height: 30%;
+    padding: 2% 2% 4%;
+}
+
 .not-label {
     display: flex;
     flex-direction: row;
@@ -46,6 +51,7 @@ body {
 }
 img {
     width: 40%;
+    margin: auto;
 }
 
 .bayan li {
@@ -78,6 +84,7 @@ label {
     max-height: 30%;
     padding: 2% 2% 4%;
 }
+
 
 .bayan:hover input[type='checkbox']:checked + .label::after {
     content: "+";
