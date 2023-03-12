@@ -1,3 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+input[type='checkbox']{
+    display: none;
+}
+
 body {
-    background: powderblue;
+    background: #FEF2E4;
+}
+.bayan-header{
+    width: 80%;
+    margin: auto;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.bayan {
+    width: 100%;
+}
+
+.bayan .meme {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.meme {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background: darkgray;
+}
+img {
+    width: 40%;
+}
+
+.bayan li {
+    list-style: none;
+
+}
+label {
+    display: flex;
+    width: 100%;
+}
+
+.bayan:hover + label::after {
+    content: "+";
+    margin-right: 2%;
+}
+
+
+.bayan li label {
+    display: flex;
+    cursor: pointer;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bayan input[type='checkbox']:checked + label{
+    color: darkgray;
+}
+
+.bayan input[type='checkbox']:checked + label + .meme {
+    max-height: 30%;
+    padding: 2% 2% 4%;
+}
+
+/*.bayan input[type='checkbox']:checked + label::after {*/
+/*    content: "+";*/
+/*    rotate: 45deg;*/
+/*}*/
+
+.bayan:hover input[type='checkbox']:checked + label:hover::after {
+    content: "+";
+    rotate: 45deg;
+}
+
+.bayan:hover  {
+    color: darkorange;
 }
